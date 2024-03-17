@@ -1,0 +1,35 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show:
+      sql: 'true'
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    username: twiliomurlidemo@gmail.com
+    properties:
+      mail:
+        smtp:
+          starttls:
+            required: 'true'
+            enable: 'true'
+    port: '587'
+    password: hirrsuwtsdybduaz
+  datasource:
+    password: Murli@1211
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/crm_zoho_db
+
+---
+
+swagger:
+  data:
+    title: CRM API
+    description: CRM OpenAPI Sepcification
+    version: 1.0.0
+    group: CRM-group-api
+    packagesToScan: com.zohocrm.controller
